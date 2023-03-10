@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables";
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	font-family: $secondaryFF;
+
+	.letter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+
+		border-radius: 6px;
+
+		background: linear-gradient(90deg, #2979ff 0%, #4c589e 100%);
+
+		color: #fff;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 1.125;
+	}
+	.name {
+		font-size: 36px;
+		font-weight: 500;
+		line-height: 1.125;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}

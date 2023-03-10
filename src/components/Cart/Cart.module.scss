@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables";
+
+.container {
+	display: flex;
+	justify-content: center;
+	max-width: 1330px;
+	width: 100%;
+	gap: 50px;
+	margin: 0 auto;
+	padding: 40px 15px;
+
+	@media (max-width: 992px) {
+		flex-direction: column;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 70%;
+
+		@media (max-width: 992px) {
+			width: 100%;
+		}
+		@media (max-width: 576px) {
+			align-items: center;
+		}
+	}
+	.total {
+		width: 30%;
+
+		@media (max-width: 992px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			gap: 20px;
+		}
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
+		.price {
+			margin-bottom: 60px;
+
+			font-family: $secondaryFF;
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 143%;
+
+			@media (max-width: 992px) {
+				margin-bottom: 0;
+				white-space: nowrap;
+			}
+		}
+		.checkout {
+			width: 100%;
+			padding: 2px 7px;
+
+			border: 1px solid $accentColor;
+			border-radius: 4px;
+
+			background: $accentColor;
+
+			color: #fff;
+			font-family: $secondaryFF;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 28px;
+			letter-spacing: 0.75px;
+			text-transform: uppercase;
+
+			transition: color 0.3s ease, background 0.3s ease;
+
+			&:hover {
+				color: $accentColor;
+				background-color: #fff;
+			}
+			&:disabled {
+				background-color: darken($color: $accentColor, $amount: 20);
+				color: darken($color: #fff, $amount: 20);
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	max-width: 1470px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 15px 100px;
+
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	@media (max-width: 576px) {
+		padding: 30px 5px 50px;
+	}
+}

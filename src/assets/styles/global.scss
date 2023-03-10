@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@500;700&display=swap");
+@import "./_reset";
+@import "./_variables";
+
+body {
+	min-height: 100vh;
+
+	font-family: $mainFF;
+	color: $darkColor;
+
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0.25em;
+		background-color: #ccc;
+	}
+	&.open {
+		overflow-y: hidden;
+	}
+}

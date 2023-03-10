@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables";
+
+.button {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	right: 0px;
+	bottom: 40px;
+
+	border: 1px solid $borderColor;
+	border-radius: 50%;
+
+	background-color: $accentColor;
+
+	color: #fff;
+
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: background-color 0.2s ease, opacity 0.5s ease, visibility 0.5s 0.5s;
+
+	&.visible {
+		visibility: visible;
+		opacity: 0.6;
+	}
+	&:hover {
+		background-color: darken($color: $accentColor, $amount: 5%);
+	}
+}

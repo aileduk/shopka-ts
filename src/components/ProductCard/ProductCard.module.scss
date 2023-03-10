@@ -1,0 +1,68 @@
+@import "../../assets/styles/variables";
+
+.card {
+	display: flex;
+	flex-direction: column;
+	max-width: 260px;
+	padding: 15px;
+	gap: 10px;
+
+	border-radius: 8px;
+
+	cursor: pointer;
+	transition: box-shadow 0.3s ease;
+
+	@media (max-width: 576px) {
+		box-shadow: 0px 1px 2px $borderColor;
+	}
+	&:hover {
+		box-shadow: 0px 1px 2px $borderColor;
+
+		@media (max-width: 576px) {
+			box-shadow: none;
+		}
+	}
+
+	.image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+
+		img {
+			max-height: 300px;
+		}
+	}
+	.title {
+		display: -webkit-box;
+
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.5;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+
+		overflow: hidden;
+	}
+	.price {
+		margin-top: auto;
+
+		font-family: $secondaryFF;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+	.description {
+		display: -webkit-box;
+
+		color: $grayColor;
+		font-size: 14px;
+		line-height: 1.43;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+
+		overflow: hidden;
+	}
+}

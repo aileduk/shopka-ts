@@ -1,0 +1,48 @@
+@import "../../assets/styles/variables";
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	max-width: 260px;
+
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		span {
+			font-size: 14px;
+			line-height: 1.43;
+		}
+	}
+	.button {
+		padding: 2px 7px;
+
+		border: 1px solid $accentColor;
+		border-radius: 4px;
+
+		color: $accentColor;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.43;
+
+		transition: color 0.3s ease, background 0.3s ease;
+
+		&:hover {
+			color: #fff;
+			background: $accentColor;
+		}
+		&.added {
+			color: #fff;
+			background: $accentColor;
+			transition: color 0.3s ease, background 0.3s ease;
+
+			&:hover {
+				color: #fff;
+				background: darken($color: $accentColor, $amount: 10%);
+			}
+		}
+	}
+}
